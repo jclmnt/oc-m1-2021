@@ -1,0 +1,37 @@
+## 1. Écrire une fonction somme telle que somme(n) renvoie la somme des entiers de 1 à n.
+def somme(n):
+    s=0
+    for i in range(n):
+        s+=i+1
+    return s
+   
+## 2. Écrire une fonction puissance2 telle que puissance2(n) renvoie la liste
+## contenant les puissances de 2 jusqu'à 2**n.
+def puissance2(n):
+    L=[]
+    for i in range(n):
+        L.append(2**i)
+    return L
+    
+## 3. Écrire une fonction produit telle que, si L est une liste de nombre,
+## produit(L) renvoie la multiplication de tous les éléments de L
+def produit(L):
+    p=1
+    for i in range (len(L)):
+        p*=L[i]
+    return p
+    
+## 4. Écrire une fonction egal telle que egal(L) renvoie True si tous les éléments de L sont égaux, False sinon.
+def egal(L):
+    for i in range (len(L)):
+        for j in range (i+1,len(L)):
+            if L[i]!=L[j]:
+                return False
+    return True
+    
+## 5. Écrire une fonction carre_parfait telle que carre_parfait(n) renvoie True si n peut être écrit comme le carré d'un entier, False sinon.
+def carre_parfait(n):
+    for i in range (n):
+        if i*i==n:
+            return True
+    return False
